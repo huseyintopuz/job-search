@@ -5,7 +5,6 @@ import Description from '../Description';
 
 const Index = () => {
 
-    // When the window size (width) down the wanted value,   
     const [open, setOpen] = useState(true);
 
     // This hook returns an object containing the window's width. 
