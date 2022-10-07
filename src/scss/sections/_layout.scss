@@ -1,0 +1,24 @@
+@use '../custom' as *;
+@use '../components//mixins' as *;
+
+.layout {
+    background-color: $gray;
+    padding: 4.5rem 7.5rem;
+
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .row > * {
+        padding: 0;
+    }
+
+    .col-xxl-2 {
+        background-color: $white;
+    }
+
+    .col-xxl-6 {
+        background-color: $light-gray;
+    }
+}

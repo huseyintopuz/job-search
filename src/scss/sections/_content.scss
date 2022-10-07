@@ -1,0 +1,417 @@
+@use '../custom' as *;
+@use '../components//mixins' as *;
+
+.content {
+    padding-top: 3rem;
+
+    @include media-breakpoint-down(xl) {
+        padding-top: 1rem;
+    }
+
+    .menu {
+        border: none;
+        background-color: $white;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+
+        .bars {
+            fill: currentColor;
+            color: $blue;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 0 2rem 1.5rem;
+        padding: 0.6rem 1.2rem;
+        background-color: $white;
+        border-radius: 9999px;
+
+        @include media-breakpoint-down(xl) {
+            margin: 0 1rem 1.5rem;
+        }
+
+        .location {
+            margin-right: 0.4rem;
+            fill: currentColor;
+            color: $blue;
+        }
+
+        svg:first-child {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        span {
+            color: $blue;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .vertical {
+            margin: 0 1rem;
+            border: 1px solid $light-gray;
+            height: 1.7rem;
+        }
+
+        input {
+            width: 23rem;
+            border: none;
+
+            @include media-breakpoint-down(xl) {
+                width: 10rem;
+            }
+
+            &::placeholder {
+                font-weight: 600;
+                font-size: 1rem;
+                color: $lighter-gray;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        svg:last-child {
+            position: absolute;
+            right: 1.5rem;
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+            color: $text-gray;
+
+            @include media-breakpoint-down(md) {
+                right: 0.8rem;
+            }
+        }
+    }
+
+    .design-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 2rem;
+
+        @include media-breakpoint-up(xxl) {
+            margin: 0 2rem 0 3rem;
+        }
+
+        @include media-breakpoint-down(xxl) {
+            margin: 0 2rem 0 3rem;
+            align-items: flex-start;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-top: 1rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1.2rem;
+
+            @include media-breakpoint-up(xxl) {
+                gap: 0.4rem;
+            }
+
+            @include media-breakpoint-down(xxl) {
+                gap: 0.6rem;
+            }
+
+            @include media-breakpoint-down(md) {
+                gap: 1.5rem;
+            }
+
+            button {
+                font-weight: 600;
+                font-size: 1rem;
+
+                &:nth-child(2n+1) {
+                    background-color: $ocean-blue;
+                    color: $blue;
+                    border: 0.2px solid $light-blue;
+                }
+
+                &:nth-child(2n+2) {
+                    background-color: $white;
+                    color: #92959C;
+                    border: 0.2px solid $lighter-gray;
+                }
+            }
+        }
+
+        button {
+            padding: 0.3rem 0.7rem;
+            border: 0.2px solid $light-blue;
+            border-radius: 9999px;
+            white-space: nowrap;
+            background-color: $white;
+
+            svg {
+                width: 1rem;
+            }
+        }
+    }
+
+    .showing-jobs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem 2rem 0;
+
+        @include media-breakpoint-down(md) {
+            display: block;
+        }
+
+        @include media-breakpoint-down(xl) {
+            margin: 2rem 1rem 0;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            margin: 2rem 2rem 0 3rem;
+        }
+
+        @include media-breakpoint-down(xxl) {
+            margin: 2rem 2rem 0 3rem;
+        }
+
+        .showing {
+
+            @include media-breakpoint-down(md) {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            span {
+                font-weight: 600;
+                font-size: 1rem;
+            }
+
+            .full {
+                margin-left: 0.3rem;
+                color: $blue;
+            }
+        }
+
+        .job-alerts {
+            display: flex;
+            align-items: center;
+
+            @include media-breakpoint-down(md) {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1
+            }
+        }
+    }
+
+    .job-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $white;
+        border-radius: 15px;
+        margin: 1rem 2rem 0;
+        padding: 1.5rem 1.7rem;
+
+        @include media-breakpoint-down(xl) {
+            margin: 1rem 1rem 0;
+        }
+
+        div:first-child {
+            display: flex;
+
+            img {
+                border-radius: 50%;
+                margin-right: 2.5rem;
+
+                @include media-breakpoint-down(xl) {
+                    margin-right: 1.2rem;
+                }
+            }
+
+            .brand {
+                h3 {
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    font-weight: 600;
+                    font-size: 1.25rem;
+                }
+
+                div {
+                    span {
+                        font-weight: 600;
+
+                        &:first-child {
+                            font-size: 1rem;
+                        }
+
+                        &:last-child {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.3rem;
+                            font-size: 0.8rem;
+                            margin-top: 0.2rem;
+                        }
+
+                        div {
+                            width: 4px;
+                            height: 4px;
+                            background-color: $light-blue;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        span {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: $light-blue;
+
+            @include media-breakpoint-down(md) {
+                margin-top: 0.5rem;
+            }
+
+            @include media-breakpoint-down(xxl) {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    .google {
+        background-color: $white;
+        border-radius: 15px;
+        margin: 1rem 1.3rem 0;
+        padding: 1.5rem 1rem 1.5rem 1.7rem;
+
+        .google-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div:first-child {
+                display: flex;
+
+                img {
+                    border-radius: 50%;
+                    margin-right: 2.5rem;
+
+                    @include media-breakpoint-down(xl) {
+                        margin-right: 1.2rem;
+                    }
+                }
+
+                .google-job {
+                    h4 {
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        font-weight: 600;
+                        font-size: 1.25rem;
+                    }
+
+                    div {
+                        span {
+                            font-weight: 600;
+                            color: $light-blue;
+
+                            &:first-child {
+                                font-size: 1rem;
+                            }
+
+                            &:last-child {
+                                display: flex;
+                                align-items: center;
+                                gap: 0.3rem;
+                                font-size: 0.8rem;
+                                margin-top: 0.5rem;
+                            }
+
+                            div {
+                                width: 4px;
+                                height: 4px;
+                                background-color: $light-blue;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .google-location {
+                font-weight: 600;
+                font-size: 0.8rem;
+                color: $light-blue;
+            }
+        }
+
+        .border {
+            border: 1px solid $lighter-gray;
+            margin: 1.2rem 0;
+            margin-right: 1rem;
+        }
+
+        .other-position {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 0.8rem;
+
+            span {
+                font-weight: 600;
+
+                &:first-child {
+                    color: $light-blue;
+                    font-size: 0.7rem;
+                }
+
+                &:last-child {
+                    color: $blue;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .job-options {
+            margin: 0.4rem 0 0.6rem;
+
+            .row {
+                display: flex;
+            }
+
+            .jobs {
+                display: flex;
+                flex-direction: column;
+                padding: 0.4rem;
+                border: 1px solid $lighter-gray;
+                border-radius: 10px;
+
+                @include media-breakpoint-down(xl) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    max-width: 10.4rem;
+                }
+
+                h6 {
+                    white-space: nowrap;
+                    color: black;
+                }
+
+                span {
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+}

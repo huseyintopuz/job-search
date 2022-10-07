@@ -1,0 +1,132 @@
+@use '../custom' as *;
+@use '../components//mixins' as *;
+
+.description {
+    height: 100%;
+    background-color: $white;
+
+    .apply {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+
+        img {
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 0.2rem;
+        }
+
+        .place {
+            margin-top: 0.8rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: $light-blue;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            margin-bottom: 1.4rem;
+
+            .bookmark {
+                fill: currentColor;
+                color: $blue;
+                width: 15px;
+                height: 15px;
+            }
+
+            span {
+                margin-left: 0.5rem;
+                color: $blue;
+                font-weight: 600;
+                font-size: 1rem;
+            }
+        }
+
+        button {
+            background-color: #3a4af4;
+            border: none;
+            border-radius: 9999px;
+            padding: 0.4rem 3.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            color: white;
+        }
+    }
+
+    .border-description {
+        border: 1px solid $light-gray;
+        margin: 1.3rem 1.5rem;
+    }
+
+    .qualifications {
+        margin-left: 2rem;
+
+        h6 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        li {
+            list-style-type: circle;
+            margin: 0 3.3rem 1rem 1rem;
+
+            p {
+                font-weight: 600;
+                font-size: 0.8rem;
+                opacity: 0.6;
+            }
+        }
+
+        span {
+            color: $blue;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+    }
+
+    .about-company {
+        margin-left: 2rem;
+
+        h5 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        div {
+            margin: 0.5rem 0;
+
+            .star {
+                fill: currentColor;
+                color: $yellow;
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+            color: $light-blue;
+        }
+
+        span {
+            display: block;
+            margin-top: 3rem;
+            font-size: 0.6rem;
+            opacity: 0.2;
+        }
+
+    }
+}

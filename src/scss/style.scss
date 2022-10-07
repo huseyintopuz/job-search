@@ -1,0 +1,24 @@
+
+@use 'custom';
+
+// IMPORT COMPONENTS
+
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';
+
+// IMPORT SECTIONS
+
+@use 'sections/content';
+@use 'sections/description';
+@use 'sections/layout';
+@use 'sections/sidebar';
+
+ul, li, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
